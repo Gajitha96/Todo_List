@@ -1,0 +1,23 @@
+.todoContainer {
+    margin: 10px;
+  }
+ 
+  .todoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #0c0808;
+    color: #ffffff;
+    width: 600px;
+  }
+
+  .todoContainer p{
+    text-align: center;
+    color: #f7f7f7;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+

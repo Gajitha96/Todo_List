@@ -1,0 +1,12 @@
+.container {
+    background-color: #03040e;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .container h1{
+    color: #ffffff;
+    justify-content:center;
+    text-align: center;
+  }
+  

@@ -1,34 +1,16 @@
-import React, { useState } from "react";
-import Header from "./components/Header/Header";
-import AddList from "./components/Todo/AddList";
-import TodoList from'./components/Todo/TodoList';
-import TodoProvider from "./store/TodoProvider";
-import Button from '@mui/material/Button';
-
-
+import { ErrorBoundary } from "./ErrorBoundary";
+import TodoPage from "./components/pages/includes/Todo";
+import { TodoContextProvider } from "./store/provider/TodoContextProvider.js";
+import Header from '../src/components/UI/Header/Header'
 
 function App() {
-  const [show, setShow] = useState(false);
-  
-
-  const addHandler = () => {
-    setShow(true);
-  };
-
-  const closeHandler = () => {
-    setShow(false);
-  };
-
- 
-
   return (
-    <TodoProvider>
-      <Header />
-      <hr/>
-      {!show &&    <Button onClick={addHandler} variant="contained" style={{ marginLeft: "auto" }}>Add +</Button>}
-      {show && <AddList onClose={closeHandler} />}
-      <TodoList />
-    </TodoProvider>
+    <ErrorBoundary>
+      <TodoContextProvider>
+        <Header />
+        <TodoPage />
+      </TodoContextProvider>
+    </ErrorBoundary>
   );
 }
 
